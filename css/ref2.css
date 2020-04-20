@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header{
+    height: 90px;
+    background: black;
+    /* background: orange; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.white-col{
+    color: white;
+}
+.header-content{
+    display: flex;
+    width: 150px;
+    /* background-color: brown; */
+    height: 60px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
+}
+.header-content p {
+    flex-basis: 38%;
+    font-size: 40px;
+}
+.header-content img {
+    flex-basis: 58%;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.send{
+    color: orange;
+    font-weight: bolder;
+}

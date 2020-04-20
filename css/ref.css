@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(238, 221, 221, 0.5) ), url(/img/delivery1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.white-color{
+    color: white;
+}
+.yell-background{
+    background-color: rgb(255, 145, 0);
+}
+.yell-color{
+    color: rgb(255, 145, 0);
+}
+
+.main-theme{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+/* .main-theme .logo{
+    margin-bottom: 140px;
+    display: inline-flex;
+    background: red;
+} */
+.main-theme .logo-content{
+    margin-bottom: 145px;
+    display: flex;
+    /* background: red; */
+    justify-content: center;
+    align-items: center;
+    /* overflow: auto; */
+    width: 400px;
+    height: 40px;
+}
+.main-theme .logo-content .logo-img img{
+    /* padding-right: 5px; */
+    height: 100%;
+    width: 50%;
+    border-radius: 50%;
+}
+.mg-bottom{
+    margin-bottom: 30px;
+}
+.ft-size{
+    font-size: 40px;
+}
+.btn{
+    padding: 20px;
+    border-radius: 7px;
+    font-size: 25px;
+    border: none;
+    cursor: pointer;
+}
+.landing-text p{
+    color: rgb(240, 229, 229);
+    font-weight: 100;
+}
+
+/* track order */
+
+.container{
+    /* margin: 50px 40px 40px 40px; */
+    /* background: red; */
+    display: flex;
+    width: 86%;
+    justify-content: space-between;
+    height: 200px;
+    padding: 10px 100px 10px 100px;
+    margin: 40px auto;
+}
+.track-item{
+    flex-basis: 27%;
+    /* background: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.track-item img{
+    height: 100%;
+    /* background: red; */
+}
+.resize{
+    height: 152px;
+    width: 164px;
+}
+.resize img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+/* got and sent package */
+.package{
+    width: 95%;
+    /* background: red; */
+    margin: 50px auto;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.package-item{
+    flex-basis: 47%;
+    background: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0 20px 0;
+}
+.got-package{
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/img/delivery1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sent-package{
+    background:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(/img/Traccar-map-e1522167106525.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.got-package:hover{
+    transform: scaleX(-1);
+}
+
+.btn-btn{
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 19px;
+    width: 100px;
+    border: none;
+    cursor: pointer;
+}
+.package p{
+    font-size: 35px;
+    color: white;
+    text-transform: capitalize;
+}
+
