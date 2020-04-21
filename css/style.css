@@ -547,6 +547,11 @@
 }
 
 @media screen and (min-width: 768px) {
+    .view-order{
+        /* padding: 7px; */
+        border: 2px solid red;
+        font-size: 17px;
+    }
     .container{
         margin-top: 20px;
         margin-right: 20px;
@@ -646,6 +651,10 @@
     .greeting{
         display: block;
     }
+
+    .view-order{
+        padding: 7px;
+    }
 }
 
 /* make an order */
@@ -696,5 +705,8 @@
         left: -57px;
         position: absolute;
         top: 81%;
+    }
+    .view-order{
+        padding: 7px;
     }
 }

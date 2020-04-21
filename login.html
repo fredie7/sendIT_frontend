@@ -9,34 +9,33 @@
 </head>
 <body>
     <section>
-        <div class="wrap">
-            <div class="wraps">
-                <div class="top-wrap">
-                    <div class="sign">
+        <div class="page-wrap">
+            <div class="page-content">
+                <div class="logo-wrap">
+                    <div class="logo-img">
                         <img src="/img/cartcropped.png" alt="">
                     </div>
-                    <div class="topic">
-                        <h3><span>send</span>IT</h3>
+                    <div class="theme-wrap">
+                        <h3><span id="send">send</span><span id="it">it</span></h3>
                     </div>
                 </div>
-                <div class="form-wrap">
-                    <div class="login-theme">
-                        <p>login</p>
-                    </div>
+                <div class="form-container">
+                    <div class="form-theme">login</div>
                     <form action="">
-                        <input type="text" placeholder="your email">
-                        <input type="text" placeholder="your password">
-                        <div class="loginn">
-                            <button class="btn-log">Login</button>
-                        </div>
+                        <input id="email" type="text" placeholder="your email">
+                        <input id="password" type="password" placeholder="securepassword">
                     </form>
-                </div>
-                <div class="options">
-                    <span class="sign"><a href="signup.html">signup</a></span>
-                    <span class="pw"><a href="">forgot password</a></span>
+                    <div class="footer-btns">
+                        <button id="signin-btn">Login</button>
+                        <!-- <p>Login</p> -->
+                        <p><a href="signup.html">signup</a></p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
+
+    <script src="/js/login.js"></script>
 </body>
 </html>
