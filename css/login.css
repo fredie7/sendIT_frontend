@@ -31,6 +31,20 @@ input{
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
+
+.danger{
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: darkred;
+}
+.success{
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: darkgreen;
+}
+
 :root{
     --yell-color: rgb(255, 145, 0);
     --yell-background: rgb(255, 145, 0);

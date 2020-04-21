@@ -56,6 +56,19 @@ input{
     margin-left: 40px;
 }
 
+.danger{
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: darkred;
+}
+.success{
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: darkgreen;
+}
+
 .theme-wrap h3{
  font-size: 36px;
 }

@@ -58,7 +58,7 @@
     <section>
         <div class="container new-order">
             <div class="orders">
-                <h3>New Order</h3>
+                <h3 class="newOrder-theme">New Order</h3>
             </div>
         </div>
     </section>
@@ -67,35 +67,37 @@
         <div class="container pick-wrapper">
             <div class="pick">
             <p>Pickup Location</p>
-            <input type="text" placeholder="provide pickup location">
+            <input class="pickUpLocation" type="text" placeholder="Provide pickup location">
             </div>
             <div class="pick">
-            <p>Pickup Location</p>
-            <input type="text" placeholder="provide pickup location">
+            <p>Delivery Location</p>
+            <input class="deliveryLocation" type="text" placeholder="Provide delivery location">
             </div>
             <div class="pick">
-            <p>Pickup Location</p>
-            <input type="text" placeholder="provide pickup location">
+            <p>Present Location</p>
+            <input class="presentLocation" type="text" placeholder="Provide present location">
             </div>
             <div class="pick">
-            <p>Pickup Location</p>
-            <input type="text" placeholder="provide pickup location">
+            <p>Receiver's phone</p>
+            <input class="receiverPhone" type="text" placeholder="Receiver's phone">
             </div>
             <div class="pick">
-            <p>Pickup Location</p>
-            <input type="text" placeholder="provide pickup location">
+            <p>Receiver's email</p>
+            <input class="receiverEmail" type="text" placeholder="Receiver's email">
             </div>
             <div class="pick">
             <p >Parcel Description</p>
-            <input type="text" class="parcel" placeholder="provide pickup location">
+            <!-- <input class="" type="text" class="parcel" placeholder="provide pickup location"> -->
+            <textarea name="" class="parcelDesc" id="" cols="30" rows="10"></textarea>
             </div>
             <div class="pick">
             <p >Approximate weight of the parcel</p>
-            <input type="text" placeholder="provide pickup location">
+            <input class="weight" type="text" placeholder="Provide approximate weight of the parcel">
             </div>
+            <div class="notify"><p></p></div>
             <button class="btn-order">Create Order</button>
         </div>
     </section>
-    
+    <script src="js/makeAnOrder.js"></script>
 </body>
 </html>

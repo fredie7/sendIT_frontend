@@ -34,7 +34,7 @@ signupBtn.addEventListener('click', ()=> {
         if (!res.ok) {
             //handle failure case
                 signupTab.textContent = 'user already exists'
-                signupTab.style.color = 'red'
+                signupTab.classList.add('danger')
                 setTimeout(() => {
                     window.location.reload()
                 }, 3000);                
@@ -43,7 +43,7 @@ signupBtn.addEventListener('click', ()=> {
             }
             // console.log(res.json())
             signupTab.textContent = 'signup successful'
-            signupTab.style.color = 'green'
+            signupTab.classList.add('success')
             setTimeout(() => {
                 window.location.reload()
             }, 3000);                
@@ -51,7 +51,8 @@ signupBtn.addEventListener('click', ()=> {
     })
     } else {
         signupTab.textContent = 'please, fill in all fields'
-        signupTab.style.color = 'red'
+        // signupTab.style.color = 'red'
+        signupTab.classList.add('danger')
         setTimeout(() => {
             window.location.reload()
         }, 3000);
