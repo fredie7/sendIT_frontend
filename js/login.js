@@ -46,6 +46,7 @@ signinBtn.addEventListener('click', ()=> {
         }, 1000);  
     })
 } else {
+    signinTab.textContent = 'fill in required fields'
     signinTab.classList.add('danger')
     setTimeout(() => {
         window.location.reload()
