@@ -51,7 +51,7 @@ orderBtn.addEventListener('click', ()=> {
         newOrderTab.textContent = 'order created'
         newOrderTab.classList.add('success')
         setTimeout(() => {
-            window.location.href('http://127.0.0.1:5501/seeYourOrders.html')
+            window.location.replace('http://127.0.0.1:5501/seeYourOrders.html')
         }, 1000);                
         return res.json()
     })
