@@ -9,11 +9,12 @@ const state = {
     userName : document.getElementById('username'),
     password : document.getElementById('password'),
     signupTab : document.querySelector('.form-theme'),
+    form: document.querySelector('form')
 }
-
 class fetchData {
     render() {
-        state.signupBtn.addEventListener('click', ()=> {
+        state.form.addEventListener('submit', (e)=> {
+            e.preventDefault()
             if (state.lastName.value !== '' || state.email.value !== '' || state.userName.value !== '' || state.password.value !== '') {
             const signupData = {
                 name: `${state.firstName.value} ${state.lastName.value}`,
@@ -46,12 +47,16 @@ class fetchData {
                         return;
                     }
                     // console.log(res.json())
+                    console.log(res)
                     state.signupTab.textContent = 'signup successful'
                     state.signupTab.classList.add('success')
                     setTimeout(() => {
                         window.location.reload()
                     }, 3000);                
                 // handle success case
+                return res.json()
+            }).then(data=>{
+                localStorage.setItem('id', JSON.stringify(data.id))
             })
             } else {
                 state.signupTab.textContent = 'please, fill in all fields'

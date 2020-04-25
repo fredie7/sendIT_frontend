@@ -41,7 +41,7 @@ class fetchData {
                 method: 'POST',
                 headers: {
                     'content-Type' : 'application/json',
-                    'Authorization': token
+                    'Authorization': token,
                 },
                 body: JSON.stringify(orderData)
             })
@@ -60,6 +60,9 @@ class fetchData {
                     window.location.replace('http://127.0.0.1:5501/seeYourOrders.html')
                 }, 1000);                
                 return res.json()
+            }).then(data => {
+                console.log(data)
+                console.log(data.createdBy)
             })
         } else {
                 state.notification.textContent = 'please, fill in required fields'

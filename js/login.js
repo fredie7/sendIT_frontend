@@ -6,7 +6,7 @@ const state = {
     email : document.getElementById('email'),
     password : document.getElementById('password'),
     signinTab : document.querySelector('.form-theme'),
-    form: document.querySelector('form')
+    form: document.querySelector('form'),
 }
 
 class fetchData {
@@ -29,6 +29,7 @@ class fetchData {
                 body: JSON.stringify(signinData)
             })
             .then(res => {
+                console.log(res)
                 if (!res.ok) {
                     state.signinTab.textContent = 'login details do not match'
                     state.signinTab.classList.add('danger')
