@@ -68,7 +68,9 @@ input{
     text-transform: capitalize;
     color: darkgreen;
 }
-
+.notify{
+    margin-left: 25px;
+}
 .theme-wrap h3{
  font-size: 36px;
 }

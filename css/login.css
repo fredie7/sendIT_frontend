@@ -3,6 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.danger{
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: darkred;
+}
+.success{
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: darkgreen;
+}
+.notify{
+    margin-left: 25px;
+}
+
 .form-container{
     border-radius: 5px;
 }
