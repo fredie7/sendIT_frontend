@@ -11,11 +11,13 @@ const state = {
     orderBtn : document.querySelector('.btn-order'),
     newOrderTab : document.querySelector('.newOrder-theme'),
     notification : document.querySelector('.notify'),
+    form: document.querySelector('form'),
 }
 
 class fetchData {
     render() {
-        state.orderBtn.addEventListener('click', ()=> {
+        state.form.addEventListener('submit', (e)=> {
+            e.preventDefault()
             if (state.pickupLocation.value !== '' || state.deliveryLocation.value !== '' || state.presentLocation.value !== ''
                 || state.receiverPhone.value !== '' || state.receiverEmail.value !== '' || state.parcelDesc.value !== '' || state.parcelWeight.value !== '') {
             const orderData = {

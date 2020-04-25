@@ -6,11 +6,13 @@ const state = {
     email : document.getElementById('email'),
     password : document.getElementById('password'),
     signinTab : document.querySelector('.form-theme'),
+    form: document.querySelector('form')
 }
 
 class fetchData {
     render() {
-        state.signinBtn.addEventListener('click', ()=> {
+        state.form.addEventListener('submit', (e)=> {
+            e.preventDefault()
             if (state.email.value !== '' || state.password.value !== '') {
             const signinData = {
                 email: state.email.value,
