@@ -6,7 +6,9 @@ const state = {
     cancelled : document.querySelector('.cancel'),
     items : document.querySelector('.items'),
     token : JSON.parse(localStorage.getItem('token')),
+    id : JSON.parse(localStorage.getItem('id')),
 }
+
 
 class fetchData {
     render() {
@@ -40,7 +42,7 @@ class fetchData {
         default:
             break;
     }
-    if (order.status === 'cancelled') {
+    if (order.createdBy === state.id && order.status === 'cancelled') {
         const orderHtml = `
             <div class="itemz">
                 <div class="item-desc">
