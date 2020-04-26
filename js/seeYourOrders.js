@@ -7,7 +7,7 @@ const state = {
     items : document.querySelector('.items'),
     token : JSON.parse(localStorage.getItem('token')),
     id : JSON.parse(localStorage.getItem('id')),
-}
+};
 
 class fetchData {
     render() {
