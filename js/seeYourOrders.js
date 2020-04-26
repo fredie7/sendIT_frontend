@@ -6,6 +6,7 @@ const state = {
     cancelled : document.querySelector('.cancel'),
     items : document.querySelector('.items'),
     token : JSON.parse(localStorage.getItem('token')),
+    id : JSON.parse(localStorage.getItem('id')),
 }
 
 class fetchData {
@@ -27,7 +28,8 @@ class fetchData {
     let totalDelivered = 0
     let totalCancelled = 0
   orderData.forEach(order=> {
-    // console.log(order)
+    console.log(order.createdBy)
+    console.log(state.id)
     switch (order.status) {
         case 'pending':
             totalPending += 1
@@ -40,7 +42,7 @@ class fetchData {
         default:
             break;
     }
-    if (order.status === 'pending') {
+    if (order.createdBy === state.id) {
         const orderHtml = `
             <div class="itemz">
                 <div class="item-desc">
@@ -57,11 +59,11 @@ class fetchData {
     }
         
   })
-  state.items.innerHTML = clientOrder;  
-  console.log(totalPending, totalDelivered)
-  state.pending.textContent = totalPending
-  state.delivered.textContent = totalDelivered
-})
+        state.items.innerHTML = clientOrder;  
+        console.log(totalPending, totalDelivered)
+        state.pending.textContent = totalPending
+        state.delivered.textContent = totalDelivered
+        })
     }
 }
 
