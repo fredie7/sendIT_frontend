@@ -7,8 +7,29 @@ const state = {
     items : document.querySelector('.items'),
     token : JSON.parse(localStorage.getItem('token')),
     id : JSON.parse(localStorage.getItem('id')),
+    userName: document.querySelector('.username'),
+    userEmail: document.querySelector('.useremail'),
+    username: document.querySelector('.usernames')
 }
 
+
+class fetchUserData {
+    render() {   
+        fetch(`http://localhost:7000/api/v1/users/${state.id}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': state.token
+            },
+        })
+        .then(res=> res.json())
+        .then(data=> {
+            state.userName.textContent = data.name;
+            state.userEmail.textContent = data.email;
+            state.username.textContent = data.name.split(" ").splice(0,1);
+        })
+    }
+}
 
 class fetchData {
     render() {
@@ -30,18 +51,21 @@ class fetchData {
     let totalCancelled = 0
   orderData.forEach(order=> {
     // console.log(order)
-    switch (order.status) {
-        case 'pending':
-            totalPending += 1
-            break;
-        case 'delivered':
-            totalDelivered += 1
-            break;
-        case 'cancelled':
-            totalCancelled += 1
-        default:
-            break;
+    if (order.createdBy === state.id) {
+        switch (order.status) {
+            case 'pending':
+                totalPending += 1
+                break;
+            case 'delivered':
+                totalDelivered += 1
+                break;
+            case 'cancelled':
+                totalCancelled += 1
+            default:
+                break;
+        }
     }
+
     if (order.createdBy === state.id && order.status === 'delivered') {
         const orderHtml = `
             <div class="itemz">
@@ -63,6 +87,7 @@ class fetchData {
   console.log(totalPending, totalDelivered)
   state.pending.textContent = totalPending
   state.delivered.textContent = totalDelivered
+  state.cancelled.textContent = totalCancelled
 })
     }
 }
@@ -70,7 +95,11 @@ class fetchData {
 class sendData {
     render() {
         const pageDisplay = new fetchData().render()
-        return pageDisplay
+        const userDisplay = new fetchUserData().render()
+        return {
+            pageDisplay,
+            userDisplay
+        }
     }
 }
 

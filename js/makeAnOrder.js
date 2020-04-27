@@ -12,7 +12,11 @@ const state = {
     newOrderTab : document.querySelector('.newOrder-theme'),
     notification : document.querySelector('.notify'),
     form: document.querySelector('form'),
+    username: document.querySelector('.usernames'),
 }
+const token = JSON.parse(localStorage.getItem('token'))
+const name = JSON.parse(localStorage.getItem('name'))
+state.username.textContent = name.split(" ").slice(0,1);
 
 class fetchData {
     render() {
@@ -36,7 +40,7 @@ class fetchData {
             state.receiverEmail.value = '';
             state.parcelDesc.value = '';
             state.parcelWeight.value = '';
-            const token = JSON.parse(localStorage.getItem('token'))
+           
             fetch("http://localhost:7000/api/v1/parcels", {
                 method: 'POST',
                 headers: {
@@ -57,10 +61,10 @@ class fetchData {
                 state.newOrderTab.textContent = 'order created'
                 state.newOrderTab.classList.add('success')
                 setTimeout(() => {
-                    window.location.replace('http://127.0.0.1:5501/seeYourOrders.html')
+                    // window.location.replace('http://127.0.0.1:5501/seeYourOrders.html')
                 }, 1000);                
                 return res.json()
-            }).then(data => {
+            }).then(data => {console.log(data)
                 console.log(data)
                 console.log(data.createdBy)
             })

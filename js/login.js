@@ -45,6 +45,7 @@ class fetchData {
                 console.log(data)
                 localStorage.setItem('token',JSON.stringify(data.token))
                 localStorage.setItem('id',JSON.stringify(data.id))
+                localStorage.setItem('name',JSON.stringify(data.name))
                 state.signinTab.textContent = 'login successful'
                 state.signinTab.classList.add('success')
                 setTimeout(() => {

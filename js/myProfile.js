@@ -65,7 +65,7 @@ class fetchData {
         }
     }
 
-    if (order.createdBy === state.id && order.status === 'cancelled') {
+    if (order.createdBy === state.id) {
         const orderHtml = `
             <div class="itemz">
                 <div class="item-desc">
